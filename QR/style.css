@@ -1,0 +1,139 @@
+:root {
+    --primary: #00c6ff;
+    --secondary: #0072ff;
+    --glass: rgba(255, 255, 255, 0.1);
+    --white: #ffffff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #49e0f4, #f09396);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Glass Card */
+.box {
+    backdrop-filter: blur(20px);
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.qr-header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.qr-header p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Select */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* QR Area */
+.qr-body {
+    margin: 20px 0;
+    padding: 10px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation */
+.qr-body img {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Buttons */
+.qr-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #eda3ea, #88b5ed);
+    color: rgb(19, 19, 19);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media(max-width: 500px) {
+    .box {
+        width: 90%;
+    }
+}

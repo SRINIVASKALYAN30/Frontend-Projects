@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FULL SCREEN LAYOUT */
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* SIDEBAR */
+.tools-board {
+  width: 250px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  color: white;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.tools-board h2 {
+  margin-bottom: 15px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row label {
+  font-weight: 500;
+}
+
+.options {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.option {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover,
+.option.active {
+  background: #00c6ff;
+  color: black;
+}
+
+/* COLORS */
+.colors .option {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.colors .option:nth-child(1){background:#fff;}
+.colors .option:nth-child(2){background:#000;}
+.colors .option:nth-child(3){background:#ff0000;}
+.colors .option:nth-child(4){background:#00ff00;}
+.colors .option:nth-child(5){background:#00c6ff;}
+
+/* BUTTONS */
+.buttons button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00c6ff;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #0072ff;
+  color: white;
+}
+
+/* FULLSCREEN CANVAS */
+.drawing-board {
+  flex: 1;
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+  background: white;
+}
